@@ -22,6 +22,12 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+        <?php the_meta() ?>
+        <?php echo get_the_term_list( get_the_ID(), 'genre','Genre: ', ', ', ' '); ?>
+        <br />
+        <?php echo get_the_term_list( get_the_ID(), 'country','Country: ', ', ', ' '); ?>
+        <br />
+        <?php echo get_the_term_list( get_the_ID(), 'actor','Actors: ', ', ', ' '); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'unite' ),

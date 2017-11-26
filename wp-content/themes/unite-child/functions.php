@@ -1,4 +1,5 @@
 <?php
+require_once( ABSPATH . '/wp-includes/shortcodes.php' );
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -13,3 +14,4 @@ endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+add_filter('widget_text','do_shortcode');
